@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Med_Reminder.LoginPage"
+             Title="Login">
+
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <Label Text="Witaj w Med-Reminder!" HorizontalOptions="Center" FontSize="Large"/>
+        <Label Text="Zaloguj się lub utwórz konto" HorizontalOptions="Center" FontSize="Medium"/>
+
+        <Entry Placeholder="email@domain.com" x:Name="EmailEntry"/>
+        <Entry Placeholder="Hasło" IsPassword="True" x:Name="PasswordEntry"/>
+
+        <Button Text="Zaloguj" Clicked="LoginButton_Clicked"/>
+        <Button Text="Zarejestruj się" Clicked="RegisterButton_Clicked"/>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Med_Reminder.MyProfilePage"
+             Title="MyProfilePage">
+    <StackLayout>
+        <!-- Nagłówek -->
+        <Label Text="Mój Profil" HorizontalOptions="CenterAndExpand" FontSize="Large"/>
+
+        <!-- Informacje o użytkowniku -->
+        <StackLayout Margin="20">
+            <Label x:Name="ImieLabel" />
+            <Label x:Name="NazwiskoLabel" />
+            <Label x:Name="EmailLabel" />
+            <Label x:Name="PlecLabel" />
+            <Label x:Name="WiekLabel" />
+            <Label x:Name="WagaLabel" />
+
+        </StackLayout>
+
+        <StackLayout>
+            <!-- Pola tekstowe do edycji danych osobowych -->
+            <Entry x:Name="NewNameEntry" Placeholder="Nowe Nazwisko" />
+            <Entry x:Name="NewEmailEntry" Placeholder="Nowy Adres e-mail" />
+            <Entry x:Name="NewPasswordEntry" Placeholder="Nowe Hasło" IsPassword="True" />
+            <Entry x:Name="NewWeightEntry" Placeholder="Nowa Waga" Keyboard="Numeric" />
+
+            <!-- Przycisk "Zapisz zmiany" -->
+            <Button Text="Zapisz zmiany" Clicked="SaveChangesButton_Clicked" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

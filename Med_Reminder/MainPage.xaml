@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Med_Reminder.MainPage"
+             Title="MainPage">
+
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <Image Source="mainpage.jpg" Aspect="AspectFill" VerticalOptions="Center" HorizontalOptions="FillAndExpand" HeightRequest="200"/>
+  
+
+        <!-- Przyciski -->
+        <StackLayout Margin="10,20,10,10">
+            <Button Text="Moja lista przypomnień" Clicked="MyRemindersButton_Clicked"/>
+            <Button Text="Moja lista leków" Clicked="MyMedicationsButton_Clicked" />
+            <Button Text="Ustaw nowe przypomnienie" Clicked="SetReminderButton_Clicked" />
+            <Button Text="Oblicz dawkę leku" Clicked="CalculateDoseButton_Clicked" />
+        </StackLayout>
+
+        <!-- Dolna część z przyciskami profilu i wylogowania -->
+        <StackLayout Orientation="Horizontal" Margin="10,10,10,20">
+            <Button Text="Mój profil" Clicked="MyProfileButton_Clicked" />
+            <Button Text="Wyloguj" Clicked="LogoutButton_Clicked" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

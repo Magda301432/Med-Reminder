@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Med_Reminder.RegistrationPage"
+             Title="RegistrationPage">
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <Label Text="Strona rejestracji" HorizontalOptions="Center" FontSize="Large"/>
+
+        <Entry Placeholder="Adres e-mail*" x:Name="EmailEntry"/>
+        <Entry Placeholder="Hasło*" IsPassword="True" x:Name="PasswordEntry"/>
+        <Entry Placeholder="Imię*" x:Name="FirstNameEntry"/>
+        <Entry Placeholder="Nazwisko*" x:Name="LastNameEntry"/>
+
+        <Picker Title="Płeć*" x:Name="GenderPicker">
+            <Picker.Items>
+                <x:String>Mężczyzna</x:String>
+                <x:String>Kobieta</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Entry Placeholder="Wiek**" Keyboard="Numeric" x:Name="AgeEntry"/>
+        <Entry Placeholder="Waga*" Keyboard="Numeric" x:Name="WeightEntry"/>
+
+        <Button Text="Zarejestruj się" Clicked="RegisterButton_Clicked"/>
+
+        <Label Text="*Pole wymagane" TextColor="Red"/>
+        <Label Text="**Opcja dozowania leku jest niedostępna dla użytkowników niepełnoletnich" TextColor="Gray"/>
+    </StackLayout>
+</ContentPage>

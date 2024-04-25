@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Med_Reminder.CalculateDosePage"
+             Title="CalculateDosePage">
+    <VerticalStackLayout>
+        <Label x:Name="WiekLabel" 
+               Text="Wiek:"
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" />
+
+        <Label x:Name="WagaLabel" 
+               Text="Waga:"
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" />
+
+        <Label x:Name="Uwaga" 
+               Text="Pamiętaj, że należy stosować się do zaleceń lekarza lub farmaceuty, a także nie dawkować samodzielnie leków na receptę!"
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" />
+
+        <Label x:Name="Instructions1" 
+               Text="Instrukcje:"
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" />
+
+        <Label x:Name="Instructions2" 
+               Text="1. Aby obliczyć całkowitą ilość leku jaką należy przyjąć podaj przepisaną ilość leku w mg/kg masy ciała. Liczbę tę można zazwyczaj znaleźć na opakowaniu leku, w ulotce dla pacjenta lub na recepcie "
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" />
+
+        <Label x:Name="Instructions3" 
+               Text="2. Aby obliczyć całkowitą ilość leku w płynie jaką należy przyjąć (jeśli nie wiemy przykładowo ile ml leku należy przyjąć, aby spożyć np. 50 mg substancji czynnej) podaj dawkę w mg/kg oraz stężenie leku (Ilość substancji czynnej na daną objętość leku. Może być wyrażona w mg/ml.)"
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" />
+
+        <Label Text="Lek w płynie?" 
+               HorizontalOptions="Center" />
+
+        <Switch x:Name="IsLiquidMedicineSwitch" 
+                HorizontalOptions="Center"
+                IsToggled="false" />
+
+        <Entry x:Name="DosageEntry" 
+               Placeholder="Dawkowanie (mg/kg)"
+               Keyboard="Numeric" />
+
+        <Entry x:Name="ConcentrationEntry" 
+               Placeholder="Stężenie leku (mg/ml)"
+               Keyboard="Numeric" />
+
+        <Button Text="Oblicz dawkę leku" Clicked="CalculateDoseButton_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>
