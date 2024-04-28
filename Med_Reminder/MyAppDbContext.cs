@@ -13,7 +13,7 @@ namespace Med_Reminder
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-Q1NRRDR\\SQLEXPRESS;Database=Med;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer("Server=KORNEL\\SQLEXPRESS01;Database=Med;Trusted_Connection=True;");
         }
 
      

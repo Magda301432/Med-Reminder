@@ -18,7 +18,9 @@
             </Picker.Items>
         </Picker>
 
-        <Entry Placeholder="Wiek**" Keyboard="Numeric" x:Name="AgeEntry"/>
+        <DatePicker x:Name="DatePicker">
+            
+        </DatePicker>
         <Entry Placeholder="Waga*" Keyboard="Numeric" x:Name="WeightEntry"/>
 
         <Button Text="Zarejestruj się" Clicked="RegisterButton_Clicked"/>

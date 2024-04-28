@@ -14,6 +14,7 @@ public partial class RegistrationPage : ContentPage
 		InitializeComponent();
         dbContext = new MyAppDbContext();
     }
+
     private void RegisterButton_Clicked(object sender, EventArgs e)
     {
         string email = EmailEntry.Text;
@@ -21,7 +22,7 @@ public partial class RegistrationPage : ContentPage
         string firstName = FirstNameEntry.Text;
         string lastName = LastNameEntry.Text;
         string gender = GenderPicker.SelectedItem?.ToString();
-        int age = Convert.ToInt32(AgeEntry.Text);
+        DateTime dateOfBirth = DatePicker.Date;
         double weight = Convert.ToDouble(WeightEntry.Text);
 
         // Tworzenie nowego obiektu danych osobowych
@@ -32,7 +33,7 @@ public partial class RegistrationPage : ContentPage
             Imie = firstName,
             Nazwisko = lastName,
             Plec = gender,
-            Wiek = age,
+            DataUrodzenia = dateOfBirth,
             Waga = weight
         };
 
