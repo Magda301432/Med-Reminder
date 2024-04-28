@@ -15,11 +15,11 @@ namespace Med_Reminder
 
         [Required]
         [MaxLength(255)]
-        [Column("adres_email")] // Mapowanie na kolumnę adres_email
+        [Column("adres_email")] 
         public string AdresEmail { get; set; }
 
         [Required]
-        [Column("haslo_szyfrowane")] // Mapowanie na kolumnę haslo_szyfrowane
+        [Column("haslo_szyfrowane")] 
         public byte[] HasloSzyfrowane { get; set; }
 
         [Required]
@@ -36,6 +36,8 @@ namespace Med_Reminder
         public int Wiek { get; set; }
 
         public double Waga { get; set; }
+
+        public DateTime DataUrodzenia { get; set; }
     }
 }
 
