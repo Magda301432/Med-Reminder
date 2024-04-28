@@ -70,10 +70,14 @@ public partial class MyProfilePage : ContentPage
     if (!string.IsNullOrEmpty(newPassword))
         currentUser.HasloSzyfrowane = Encoding.UTF8.GetBytes(newPassword);
 
-    currentUser.Waga = newWeight;
+    if (!string.IsNullOrEmpty(NewWeightEntry.Text) && double.TryParse(NewWeightEntry.Text, out double newWeightValue))
+    {
+        currentUser.Waga = newWeightValue;
+    }
 
-    
-    _userProfileRepository.UpdateDaneOsobowe(currentUser);
+
+
+        _userProfileRepository.UpdateDaneOsobowe(currentUser);
     await _userProfileRepository.SaveChanges();
 
    
