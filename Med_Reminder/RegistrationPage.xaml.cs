@@ -25,7 +25,28 @@ public partial class RegistrationPage : ContentPage
         DateTime dateOfBirth = DatePicker.Date;
         double weight = Convert.ToDouble(WeightEntry.Text);
 
-        // Tworzenie nowego obiektu danych osobowych
+        if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password) ||
+        string.IsNullOrWhiteSpace(firstName) || string.IsNullOrWhiteSpace(lastName) ||
+        gender == null)
+        {
+            DisplayAlert("B³¹d", "Proszê wype³niæ wszystkie wymagane pola.", "OK");
+            return;
+        }
+
+       
+        if (!email.Contains("@"))
+        {
+            DisplayAlert("B³¹d", "Nieprawid³owy adres e-mail. Wymagany email w formie: email@domain", "OK");
+            return;
+        }
+
+        if (!double.TryParse(WeightEntry.Text, out weight))
+        {
+            DisplayAlert("B³¹d", "Nieprawid³owa wartoœæ wagi.", "OK");
+            return;
+        }
+
+     
         var newUser = new DaneOsobowe()
         {
             AdresEmail = email,
@@ -37,11 +58,11 @@ public partial class RegistrationPage : ContentPage
             Waga = weight
         };
 
-        // Dodanie nowego u¿ytkownika do bazy danych
+        
         dbContext.__dane_osobowe.Add(newUser);
         dbContext.SaveChanges();
 
-        // Wyœwietlenie komunikatu o sukcesie
+        
         DisplayAlert("Rejestracja", "Rejestracja zakoñczona sukcesem!", "OK");
         Navigation.PushAsync(new LoginPage());
     }

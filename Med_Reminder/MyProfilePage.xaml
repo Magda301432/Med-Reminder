@@ -4,10 +4,10 @@
              x:Class="Med_Reminder.MyProfilePage"
              Title="MyProfilePage">
     <StackLayout>
-        <!-- Nagłówek -->
+       
         <Label Text="Mój Profil" HorizontalOptions="CenterAndExpand" FontSize="Large"/>
 
-        <!-- Informacje o użytkowniku -->
+        
         <StackLayout Margin="20">
             <Label x:Name="ImieLabel" />
             <Label x:Name="NazwiskoLabel" />
@@ -19,13 +19,13 @@
         </StackLayout>
 
         <StackLayout>
-            <!-- Pola tekstowe do edycji danych osobowych -->
+           
             <Entry x:Name="NewNameEntry" Placeholder="Nowe Nazwisko" />
             <Entry x:Name="NewEmailEntry" Placeholder="Nowy Adres e-mail" />
             <Entry x:Name="NewPasswordEntry" Placeholder="Nowe Hasło" IsPassword="True" />
             <Entry x:Name="NewWeightEntry" Placeholder="Nowa Waga" Keyboard="Numeric" />
 
-            <!-- Przycisk "Zapisz zmiany" -->
+            
             <Button Text="Zapisz zmiany" Clicked="SaveChangesButton_Clicked" />
         </StackLayout>
     </StackLayout>
