@@ -1,6 +1,6 @@
 using System;
 using System.Text;
-using Xamarin.Forms;
+
 
 namespace Med_Reminder
 {
