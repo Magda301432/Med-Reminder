@@ -4,10 +4,6 @@
              x:Class="Med_Reminder.CalculateDosePage"
              Title="CalculateDosePage">
     <VerticalStackLayout>
-        <Label x:Name="WiekLabel" 
-               Text="Wiek:"
-               VerticalOptions="Center" 
-               HorizontalOptions="Center" />
 
         <Label x:Name="WagaLabel" 
                Text="Waga:"

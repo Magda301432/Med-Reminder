@@ -32,7 +32,6 @@ namespace Med_Reminder
 
             if (_currentUser != null)
             {
-                WiekLabel.Text = "Wiek: " + _currentUser.Wiek.ToString();
                 WagaLabel.Text = "Waga: " + _currentUser.Waga.ToString();
             }
             else
